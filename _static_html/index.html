@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LXD Documentation Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+        </label>
+        <span class="theme-label">Dark Mode</span>
+    </div>
+
+    <div class="container">
+        <!-- Left Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <!-- SVG Logo -->
+                    <svg version="1.1" baseProfile="full" width="100" height="90" viewBox="0 0 340 310" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="white" stroke-width="1.5">
+                        <g transform="rotate(30) skewX(30)">
+                        <rect x="110" y="-72" width="175" height="75" fill="#333333" transform="skewX(-50)"/>
+                        <rect x="110" y="3" width="87.5" height="75" fill="#CDCDCD" transform="skewX(-50)"/>
+                        <rect x="16.5" y="78.9" width="87.5" height="25" fill="#CDCDCD" />
+                        <rect x="16.5" y="104.5" width="175" height="25" fill="#888888" />
+                        <rect x="16.5" y="130" width="175" height="50" fill="#DD4814" />
+                        <rect x="104" y="166" width="89.5" height="25" fill="#CDCDCD" transform="skewY(-40)"/>
+                        <rect x="228.3" y="29.5" width="87.5" height="75" fill="#888888" transform="skewX(-50)"/>
+                        <rect x="191.8" y="266" width="89.5" height="25" fill="#888888" transform="skewY(-40)"/>
+                        <rect x="192" y="291" width="179.5" height="50" fill="#DD4814" transform="skewY(-40)"/>
+                        <rect x="282.3" y="240" width="89.1" height="50" fill="#333333" transform="skewY(-40)"/>
+                        <rect x="194" y="3.7" width="87.5" height="25" fill="#333333" />
+                        </g>
+                        <line x1="93" y1="57" x2="93" y2="88" />
+                        <line x1="169" y1="131" x2="92" y2="88" />
+                        <line x1="92" y1="88" x2="14" y2="128" />
+                        </g>
+                        </svg>
+                    <h2>LXD Docs</h2>
+                </div>
+                <button class="mobile-toggle" id="sidebarToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <div class="search-container">
+                <input type="text" placeholder="Search documentation..." class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <nav>
+                <div class="nav-section">
+                    <h3 class="nav-title">Getting Started <i class="fas fa-chevron-down"></i></h3>
+                    <ul class="nav-items">
+                        <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-rocket"></i> Quick Start Guide</a></li>
+                        <li><a href="#"><i class="fas fa-download"></i> Installation</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Configuration</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-title">Usage <i class="fas fa-chevron-down"></i></h3>
+                    <ul class="nav-items">
+                        <li><a href="#"><i class="fas fa-cube"></i> Container Management</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> Virtual Machines</a></li>
+                        <li><a href="#"><i class="fas fa-server"></i> Storage Pools</a></li>
+                        <li><a href="#"><i class="fas fa-network-wired"></i> Networking</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-title">Advanced <i class="fas fa-chevron-down"></i></h3>
+                    <ul class="nav-items">
+                        <li><a href="#"><i class="fas fa-code"></i> API Reference</a></li>
+                        <li><a href="#"><i class="fas fa-terminal"></i> CLI Commands</a></li>
+                        <li><a href="#"><i class="fas fa-project-diagram"></i> Clustering</a></li>
+                        <li><a href="#"><i class="fas fa-shield-alt"></i> Security</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav-section">
+                    <h3 class="nav-title">Community <i class="fas fa-chevron-down"></i></h3>
+                    <ul class="nav-items">
+                        <li><a href="#"><i class="fas fa-users"></i> Forums</a></li>
+                        <li><a href="#"><i class="fab fa-github"></i> GitHub</a></li>
+                        <li><a href="#"><i class="fas fa-hands-helping"></i> Contributing</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="version-selector">
+                    <span>Version</span>
+                    <select>
+                        <option>LXD 5.21 (Latest)</option>
+                        <option>LXD 5.0 LTS</option>
+                        <option>LXD 4.0 LTS</option>
+                    </select>
+                </div>
+                <p>© 2025 Canonical Ltd.</p>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content">
+            <header class="page-header">
+                <div class="breadcrumbs">
+                    <a href="#">Home</a> / <a href="#">Documentation</a>
+                </div>
+                <h1>Welcome to the LXD Documentation Hub</h1>
+                <div class="header-subtitle">Everything you need to know about the next generation system container and virtual machine manager</div>
+            </header>
+            
+            <div class="notification">
+                <i class="fas fa-info-circle"></i>
+                <div>
+                    <strong>New release:</strong> LXD 5.21 is now available with improved VM support and enhanced security features. 
+                    <a href="#">View release notes</a>
+                </div>
+                <button class="close-notification"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="tabbed-section">
+                <div class="tabs">
+                    <button class="tab active" data-target="overview">Overview</button>
+                    <button class="tab" data-target="features">Features</button>
+                    <button class="tab" data-target="use-cases">Use Cases</button>
+                </div>
+
+                <div class="tab-content active" id="overview">
+                    <section class="intro">
+                        <h2>What is LXD?</h2>
+                        <p>LXD (pronounced lex-dee) is a modern, secure, and powerful system container and virtual machine manager developed by Canonical. It provides a unified experience for running and managing full Linux systems inside containers or virtual machines. LXD scales from a single machine to a full data center rack, making it suitable for both development and production workloads.</p>
+                        
+                        <p>With LXD, you can easily set up a system that feels like a small private cloud, running any type of workload efficiently while optimizing your resources.</p>
+
+                        <div class="key-points">
+                            <div class="key-point">
+                                <i class="fas fa-rocket"></i>
+                                <h3>Lightweight</h3>
+                                <p>Minimal overhead compared to traditional VMs</p>
+                            </div>
+                            <div class="key-point">
+                                <i class="fas fa-lock"></i>
+                                <h3>Secure</h3>
+                                <p>Strong isolation and security features</p>
+                            </div>
+                            <div class="key-point">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <h3>Fast</h3>
+                                <p>Near-native performance for applications</p>
+                            </div>
+                            <div class="key-point">
+                                <i class="fas fa-project-diagram"></i>
+                                <h3>Scalable</h3>
+                                <p>From single machine to data center</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="tab-content" id="features">
+                    <section class="features-section">
+                        <h2>Key Features</h2>
+
+                        <div class="feature-item">
+                            <h3><i class="fas fa-box"></i> System Containers</h3>
+                            <p>Run full Linux systems as containers with minimal overhead. LXD containers provide the same user experience as virtual machines but with lower resource requirements and faster startup times.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h3><i class="fas fa-server"></i> Virtual Machines</h3>
+                            <p>LXD also supports full virtual machines when hardware-level isolation is needed, providing a unified management interface for both VMs and containers.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h3><i class="fas fa-cloud"></i> Image-based Deployment</h3>
+                            <p>LXD uses pre-built images for a wide variety of Linux distributions, making it easy to deploy any supported distribution in seconds.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h3><i class="fas fa-network-wired"></i> Advanced Networking</h3>
+                            <p>Support for multiple network interfaces, bridges, macvlan, SR-IOV, OVN and more, allowing complex network topologies for your containers and VMs.</p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h3><i class="fas fa-hdd"></i> Storage Management</h3>
+                            <p>Flexible storage options including ZFS, Btrfs, LVM, Ceph, and directory-based storage with features like snapshots and quotas.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="tab-content" id="use-cases">
+                    <section class="use-cases-section">
+                        <h2>Common Use Cases</h2>
+
+                        <div class="use-case">
+                            <h3>Development Environments</h3>
+                            <p>Create isolated, reproducible development environments that mimic production. Each developer can have their own instances without interfering with others.</p>
+                            <div class="tag-container">
+                                <span class="tag">DevOps</span>
+                                <span class="tag">CI/CD</span>
+                                <span class="tag">Testing</span>
+                            </div>
+                        </div>
+
+                        <div class="use-case">
+                            <h3>Hosting & Application Deployment</h3>
+                            <p>Run multiple applications in isolated environments on the same hardware, increasing density and reducing costs compared to traditional VMs.</p>
+                            <div class="tag-container">
+                                <span class="tag">Websites</span>
+                                <span class="tag">Microservices</span>
+                                <span class="tag">Cloud Native</span>
+                            </div>
+                        </div>
+
+                        <div class="use-case">
+                            <h3>Edge Computing</h3>
+                            <p>Deploy multiple workloads on edge devices with minimal overhead, perfect for IoT gateways and remote computing nodes.</p>
+                            <div class="tag-container">
+                                <span class="tag">IoT</span>
+                                <span class="tag">Embedded</span>
+                                <span class="tag">Remote</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <section class="quick-start">
+                <h2>Quick Start Guide</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Installing LXD on Ubuntu</span>
+                        <button class="copy-btn" data-clipboard-target="#install-code"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre id="install-code"><code>$ sudo snap install lxd
+$ sudo lxd init</code></pre>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>Creating your first container</span>
+                        <button class="copy-btn" data-clipboard-target="#first-container"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <pre id="first-container"><code>$ lxc launch ubuntu:22.04 my-container
+$ lxc exec my-container -- bash</code></pre>
+                </div>
+
+                <div class="expand-section">
+                    <div class="expand-header">
+                        <h3>More examples</h3>
+                        <button class="expand-toggle"><i class="fas fa-chevron-down"></i></button>
+                    </div>
+                    <div class="expand-content">
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Creating a VM instead of a container</span>
+                                <button class="copy-btn" data-clipboard-target="#vm-code"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre id="vm-code"><code>$ lxc launch ubuntu:22.04 my-vm --vm
+$ lxc console my-vm</code></pre>
+                        </div>
+                        
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Creating a custom profile</span>
+                                <button class="copy-btn" data-clipboard-target="#profile-code"><i class="fas fa-copy"></i></button>
+                            </div>
+                            <pre id="profile-code"><code>$ lxc profile create development
+$ lxc profile edit development</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="resources">
+                <h2>Official Resources</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-icon"><i class="fab fa-github"></i></div>
+                        <h3>GitHub Repository</h3>
+                        <p>The official repository for LXD, containing source code, installation instructions, and release information for this modern container and VM manager.</p>
+                        <a href="https://github.com/canonical/lxd" class="button">Visit Repository</a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-book"></i></div>
+                        <h3>Canonical LXD Page</h3>
+                        <p>Comprehensive overview of LXD as the platform for open source virtualization with a cloud-like experience, including key features and benefits.</p>
+                        <a href="https://canonical.com/lxd" class="button">Learn More</a>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-file-alt"></i></div>
+                        <h3>Documentation</h3>
+                        <p>Complete official documentation covering installation, configuration, usage guides, and advanced features of LXD.</p>
+                        <a href="https://documentation.ubuntu.com/lxd/en/latest/" class="button">Read Docs</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="advanced-features">
+                <h2>Advanced Features</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Clustering</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>LXD clustering allows you to manage containers and virtual machines across multiple hosts as if they were local. This provides high-availability and load balancing capabilities for your infrastructure.</p>
+                            <p>Key benefits include:</p>
+                            <ul>
+                                <li>Distributed storage and compute resources</li>
+                                <li>Transparent instance migration between nodes</li>
+                                <li>Single management endpoint for your entire cluster</li>
+                            </ul>
+                            <a href="#" class="learn-more">Learn more about clustering</a>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Storage Backends</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>LXD supports various storage backends to meet different performance and feature requirements:</p>
+                            <ul>
+                                <li><strong>ZFS</strong>: Advanced features like compression, quotas, and snapshots</li>
+                                <li><strong>Btrfs</strong>: Similar to ZFS with built-in copy-on-write</li>
+                                <li><strong>LVM</strong>: Logical Volume Management for flexibility</li>
+                                <li><strong>Ceph</strong>: Distributed storage for clustering</li>
+                                <li><strong>Directory</strong>: Simple storage option requiring no configuration</li>
+                            </ul>
+                            <a href="#" class="learn-more">Explore storage options</a>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3>Security Features</h3>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>LXD provides comprehensive security controls including:</p>
+                            <ul>
+                                <li>AppArmor and Seccomp profiles for container isolation</li>
+                                <li>Resource limits (CPU, memory, disk I/O, network)</li>
+                                <li>Role-based access control</li>
+                                <li>TLS encryption for all communications</li>
+                                <li>Project-based multitenancy</li>
+                            </ul>
+                            <a href="#" class="learn-more">Read security documentation</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Tutorials and Guides</h2>
+                <ul class="resource-list">
+                    <li>
+                        <a href="https://documentation.ubuntu.com/server/how-to/containers/lxd-containers/">Getting Started with LXD</a>
+                        <p>A comprehensive guide to installing and configuring LXD on Ubuntu systems using the command line.</p>
+                        <div class="difficulty">
+                            <span class="difficulty-label">Difficulty:</span>
+                            <div class="difficulty-level">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://ubuntu.com/blog/lxd-virtual-machines-an-overview">LXD Virtual Machines Overview</a>
+                        <p>Detailed exploration of LXD's virtual machine capabilities, how to set them up, and their feature parity with containers in the 5.0 LTS release.</p>
+                        <div class="difficulty">
+                            <span class="difficulty-label">Difficulty:</span>
+                            <div class="difficulty-level">
+                                <span class="active"></span>
+                                <span class="active"></span>
+                                <span class="active"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="https://weclouddata.com/blog/learning-guide/install-and-run-containers-on-linux-virtual-machines-lxd-lxc/">Install and Run Containers</a>
+                        <p>A practical guide with commands to quickly get up and running with LXD container technologies on Linux systems.</p>
+                        <div class="difficulty">
+                            <span class="difficulty-label">Difficulty:</span>
+                            <div class="difficulty-level">
+                                <span class="active"></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Community Resources</h2>
+                <div class="community-links">
+                    <a href="https://discourse.ubuntu.com/c/lxd/" class="community-card">
+                        <div class="community-icon"><i class="fas fa-users"></i></div>
+                        <h3>Community Forum</h3>
+                        <p>Connect with other LXD users and developers</p>
+                    </a>
+                    <a href="https://linuxcontainers.org/lxd/try-it/" class="community-card">
+                        <div class="community-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Try LXD Online</h3>
+                        <p>Interactive demo without installation</p>
+                    </a>
+                    <a href="https://ubuntu.com/microcloud" class="community-card">
+                        <div class="community-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>MicroCloud</h3>
+                        <p>LXD as a lightweight cloud solution</p>
+                    </a>
+                </div>
+            </section>
+
+            <section class="newsletter">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter to receive updates about new LXD releases, tutorials, and community events.</p>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="button">Subscribe</button>
+                    </div>
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        I agree to receive emails about LXD and related topics
+                    </label>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Mobile sidebar toggle
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        // Dark mode toggle
+        document.getElementById('checkbox').addEventListener('change', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Tabs functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all tab content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show the corresponding tab content
+                const target = this.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all accordion items
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.fas').classList.remove('fa-minus');
+                    item.querySelector('.fas').classList.add('fa-plus');
+                });
+                
+                // Toggle the clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                    item.querySelector('.fas').classList.remove('fa-plus');
+                    item.querySelector('.fas').classList.add('fa-minus');
+                }
+            });
+        });
+
+        // Expandable content
+        document.querySelector('.expand-toggle').addEventListener('click', function() {
+            const content = document.querySelector('.expand-content');
+            const icon = this.querySelector('i');
+            
+            content.classList.toggle('active');
+            if (content.classList.contains('active')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        });
+
+        // Copy code buttons
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-clipboard-target');
+                const text = document.querySelector(targetId).textContent;
+                
+                navigator.clipboard.writeText(text).then(() => {
+                    const originalIcon = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i>';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalIcon;
+                    }, 2000);
+                });
+            });
+        });
+
+        // Close notification
+        document.querySelector('.close-notification').addEventListener('click', function() {
+            document.querySelector('.notification').style.display = 'none';
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Collapsible nav sections
+        document.querySelectorAll('.nav-title').forEach(title => {
+            title.addEventListener('click', function() {
+                this.parentElement.classList.toggle('collapsed');
+                const icon = this.querySelector('i');
+                if (this.parentElement.classList.contains('collapsed')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-right');
+                } else {
+                    icon.classList.remove('fa-chevron-right');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
